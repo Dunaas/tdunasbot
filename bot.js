@@ -12,7 +12,7 @@ var options = {
     },
     identity: {
         username: "dunaaas",
-        password: process.env.OAUTH_TOKEN;
+        password: process.env.OAUTH_TOKEN
     },
     channels: canais
 
