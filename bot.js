@@ -5,7 +5,7 @@ var canais = ['dunaaas','diffensive','sirgank','mahriojr','dobrein','noelbh', 'g
 
 var options = {
     options: {
-        debug: true
+        debug: false
     },
     connection: {
         reconnect: true
@@ -26,13 +26,6 @@ client.connect();
 
 client.on('connected', function(address, port) {
     console.log("Address: " + address + " Port: " + port);
-    setInterval(function() {
-        client.disconnect();
-    }, 21600000);
-    setInterval(function() {
-        var client = new tmi.client(options);
-        client.connect();
-    }, 21603000);
 });
 
 client.on("chat", function (channel, userstate, message, self) {
@@ -55,15 +48,5 @@ client.on("chat", function (channel, userstate, message, self) {
     if (command === '!log' && userstate['username'] === 'dunaaas'){
         client.say("dunaaas", canais.toString());
         console.log(canais);
-    }
-
-    if (command === '!entrar' && userstate['username'] === 'dunaaas'){
-        setTimeout(function() {
-            client.disconnect();
-        }, 3000);
-        setTimeout(function() {
-            client = new tmi.client(options);
-            client.connect();
-        }, 5000);
     }
 });
