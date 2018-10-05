@@ -50,3 +50,37 @@ client.on("chat", function (channel, userstate, message, self) {
         console.log(canais);
     }
 });
+
+//metsu
+
+var options2 = {
+    options: {
+        debug: false
+    },
+    connection: {
+        reconnect: true
+    },
+    identity: {
+        username: "zmetsu",
+        password: process.env.OAUTH_TOKEN2
+    },
+    channels: canais
+
+};
+
+var client2 = new tmi.client(options2);
+client2.connect();
+
+//variaveis de eventos
+
+client2.on('connected', function(address, port) {
+    console.log("metsu logged!");
+});
+
+client2.on("chat", function (channel, userstate, message, self) {
+    let command = message.split(" ")[0];
+    let args = message.split(" ").slice(1);
+    if (command === '!metsu'){
+    client.say("dunaaas", "teste");
+    }
+});
