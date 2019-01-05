@@ -1,7 +1,7 @@
 var tmi = require('tmi.js');
 
 
-var canais = ['dunaaas','diffensive','sirgank','mahriojr','dobrein','noel', 'gaules', 'leopingo69', 'doritosboyy];
+var canais = ['dunaaas','diffensive','sirgank','mahriojr','dobrein','noel', 'gaules', 'leopingo69', 'doritosboyy'];
 
 var options = {
     options: {
@@ -82,5 +82,39 @@ client2.on("chat", function (channel, userstate, message, self) {
     let args = message.split(" ").slice(1);
     if (command === '!metsu'){
         client2.say("dunaaas", "teste");
+    }
+});
+
+//hellz1
+
+var options3 = {
+    options: {
+        debug: false
+    },
+    connection: {
+        reconnect: true
+    },
+    identity: {
+        username: "me_marque_se_mibrzou",
+        password: process.env.OAUTH_TOKEN3
+    },
+    channels: canais
+
+};
+
+var client3 = new tmi.client(options2);
+client3.connect();
+
+//variaveis de eventos
+
+client3.on('connected', function(address, port) {
+    console.log("Hellz1 logged!");
+});
+
+client3.on("chat", function (channel, userstate, message, self) {
+    let command = message.split(" ")[0];
+    let args = message.split(" ").slice(1);
+    if (command === '!hellz'){
+        client3.say("dunaaas", "teste");
     }
 });
