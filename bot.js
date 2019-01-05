@@ -81,7 +81,7 @@ client2.on("chat", function (channel, userstate, message, self) {
     let command = message.split(" ")[0];
     let args = message.split(" ").slice(1);
     if (command === '!metsu'){
-        client2.say("dunaaas", "teste");
+        client.say("dunaaas", "Metsu Online!");
     }
 });
 
@@ -115,6 +115,6 @@ client3.on("chat", function (channel, userstate, message, self) {
     let command = message.split(" ")[0];
     let args = message.split(" ").slice(1);
     if (command === '!hellz'){
-        client3.say("dunaaas", "teste");
+        client.say("dunaaas", "Hellz Online!");
     }
 });
