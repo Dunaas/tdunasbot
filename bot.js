@@ -102,7 +102,7 @@ var options3 = {
 
 };
 
-var client3 = new tmi.client(options2);
+var client3 = new tmi.client(options3);
 client3.connect();
 
 //variaveis de eventos
