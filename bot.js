@@ -95,7 +95,7 @@ var options3 = {
         reconnect: true
     },
     identity: {
-        username: "me_marque_se_mibrzou",
+        username: "hellznaldin",
         password: process.env.OAUTH_TOKEN3
     },
     channels: canais
