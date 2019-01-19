@@ -108,7 +108,7 @@ client3.connect();
 //variaveis de eventos
 
 client3.on('connected', function(address, port) {
-    console.log("Hellz1 logged!");
+    console.log("hellznaldin logged!");
 });
 
 client3.on("chat", function (channel, userstate, message, self) {
