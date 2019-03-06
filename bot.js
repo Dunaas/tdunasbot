@@ -1,7 +1,7 @@
 var tmi = require('tmi.js');
 
 
-var canais = ['dunaaas','diffensive','sirgank','mahriojr','dobrein','noel', 'gaules', 'leopingo69', 'doritosboyy', 'saullo', 'm!m'];
+var canais = ['dunaaas','diffensive','sirgank','mahriojr','dobrein','noel', 'gaules', 'leopingo69', 'doritosboyy', 'saullo', 'fadintv'];
 
 var options = {
     options: {
